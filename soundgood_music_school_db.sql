@@ -34,8 +34,14 @@ CREATE TABLE "contact_person"
 CREATE TABLE "student"
 (
     "id" int NOT NULL REFERENCES "person" PRIMARY KEY,
-    "sibling_student_id" int REFERENCES "student",
     "contact_person_id" int REFERENCES "contact_person"
+);
+
+CREATE TABLE "student_sibling"
+(
+    "student_id" int NOT NULL REFERENCES "student",
+    "sibling_student_id" int NOT NULL REFERENCES "student",
+    PRIMARY KEY("student_id", "sibling_student_id")
 );
 
 CREATE TABLE "instructor"

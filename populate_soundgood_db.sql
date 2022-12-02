@@ -73,18 +73,25 @@ VALUES
 INSERT INTO contact_person (id)
 VALUES
   (1),
-  (2),
-  (3),
-  (4),
-  (5);
+  (2);
 
-INSERT INTO student (id)
+INSERT INTO student (id, contact_person_id)
 VALUES
-  (6),
-  (7),
-  (8),
-  (9),
-  (10);
+  (3, NULL),
+  (4, NULL),
+  (5, NULL),
+  (6, 1),
+  (7, 1),
+  (8, 2),
+  (9, 2),
+  (10, 2);
+
+INSERT INTO student_sibling (student_id, sibling_student_id)
+VALUES
+  (6, 7),
+  (8, 9),
+  (8, 10),
+  (9, 10);
 
 INSERT INTO instructor (id)
 VALUES

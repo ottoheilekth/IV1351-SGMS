@@ -157,7 +157,7 @@ VALUES
   ('Oct 22, 2023',50,'private_lesson',14),
   ('Aug 8, 2023',50,'private_lesson',11),
   ('Oct 21, 2023',50,'group_lesson',13),
-  ('Nov 14, 2023',50,'private_lesson',13);
+  ('Nov 14, 2023',50,'ensemble',13);
 
 INSERT INTO student_lesson (student_id,lesson_id)
 VALUES
@@ -171,9 +171,9 @@ INSERT INTO private_lesson (id,instrument_id,level)
 VALUES
   (1,1,'intermediate'),
   (6,2,'advanced'),
+  (7,5,'beginner'),
   (12,3,'beginner'),
-  (13,4,'intermediate'),
-  (15,5,'beginner');
+  (13,4,'intermediate');
 
 INSERT INTO group_lesson (id,instrument_id,level,min_persons,max_persons)
 VALUES

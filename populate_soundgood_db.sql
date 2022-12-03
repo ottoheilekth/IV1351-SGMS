@@ -153,19 +153,21 @@ VALUES
   ('Feb 2, 2023',50,'group_lesson',12),
   ('May 26, 2023',50,'group_lesson',12),
   ('Jan 29, 2023',50,'ensemble',12),
-  ('Mar 25, 2023',50,'ensemble',11),
+  ('Dec 13, 2022',50,'ensemble',11),
   ('Oct 22, 2023',50,'private_lesson',14),
   ('Aug 8, 2023',50,'private_lesson',11),
   ('Oct 21, 2023',50,'group_lesson',13),
-  ('Nov 14, 2023',50,'ensemble',13);
+  ('Dec 13, 2022',50,'ensemble',13);
 
 INSERT INTO student_lesson (student_id,lesson_id)
 VALUES
+  (4,15),
+  (5,15),
   (6,1),
   (7,4),
   (8,6),
   (9,8),
-  (10,12);
+  (10,11);
 
 INSERT INTO private_lesson (id,instrument_id,level)
 VALUES
@@ -188,5 +190,5 @@ VALUES
   (2,'rutrum',2,10),
   (5,'mollis',3,13),
   (10,'sapien',2,15),
-  (11,'dui',1,17),
-  (15,'eget',4,19);
+  (11,'eget',1,17),
+  (15,'dui',4,19);

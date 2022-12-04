@@ -1,3 +1,4 @@
+CREATE VIEW list_ensembles_next_week AS
 SELECT EXTRACT(DOW FROM l.date_and_time) AS weekday, e.genre, e.max_persons - COUNT(*) AS seats_left, e.id AS ensemble_id
 FROM ensemble AS e
 INNER JOIN lesson AS l

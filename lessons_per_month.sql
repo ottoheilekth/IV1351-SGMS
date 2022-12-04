@@ -1,3 +1,4 @@
+CREATE VIEW lessons_per_month AS
 SELECT DISTINCT EXTRACT(MONTH FROM date_and_time) AS month, COALESCE(private_lessons, 0) AS private_lessons,
 COALESCE(group_lessons, 0) AS group_lessons, COALESCE(ensembles, 0) AS ensembles, COALESCE(total_lessons, 0) AS total_lessons
 FROM lesson AS l

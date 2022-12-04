@@ -1,3 +1,4 @@
+CREATE VIEW count_siblings AS
 SELECT number_of_siblings, COUNT(*) AS number_of_students
 FROM (
     SELECT SUM(

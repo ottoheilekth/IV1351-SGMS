@@ -1,3 +1,4 @@
+CREATE VIEW instructor_lessons_over_threshold AS
 SELECT COUNT(*) AS lessons_given, id AS instructor_id
 FROM (
     SELECT i.id

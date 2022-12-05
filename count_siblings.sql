@@ -17,5 +17,4 @@ FROM (
     ) AS foo
     GROUP BY id
 ) AS foo
-GROUP BY number_of_siblings
-HAVING COUNT(*) > 0;
+GROUP BY number_of_siblings;

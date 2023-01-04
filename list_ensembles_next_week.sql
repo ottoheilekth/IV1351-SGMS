@@ -1,5 +1,10 @@
 CREATE VIEW list_ensembles_next_week AS
-SELECT EXTRACT(DOW FROM l.date_and_time) AS weekday, e.genre, e.max_persons - COUNT(*) AS seats_left, e.id AS ensemble_id
+SELECT EXTRACT(DOW FROM l.date_and_time) AS weekday, e.genre,
+CASE
+    WHEN e.max_persons - COUNT(*) = 0 THEN 'full booked'
+    WHEN e.max_persons - COUNT(*) = 1 OR e.max_persons - COUNT(*) = 2 THEN '1-2 seats left'
+    ELSE 'many seats left'
+END as seats_left, e.id AS ensemble_id
 FROM ensemble AS e
 INNER JOIN lesson AS l
 ON l.id = e.id

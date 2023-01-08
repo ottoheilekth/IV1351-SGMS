@@ -157,7 +157,7 @@ VALUES
   ('Oct 22, 2023',50,'private_lesson',14),
   ('Aug 8, 2023',50,'private_lesson',11),
   ('Oct 21, 2023',50,'group_lesson',13),
-  ('Jan 17, 2023',50,'ensemble',13);
+  ('Jan 16, 2023',50,'ensemble',13);
 
 INSERT INTO student_lesson (student_id,lesson_id)
 VALUES

@@ -2,7 +2,7 @@ CREATE VIEW list_ensembles_next_week AS
 SELECT EXTRACT(DOW FROM l.date_and_time) AS weekday, e.genre,
 CASE
     WHEN e.max_persons - COUNT(*) = 0 THEN 'full booked'
-    WHEN e.max_persons BETWEEN 1 AND 2 THEN '1-2 seats left'
+    WHEN e.max_persons - COUNT(*) BETWEEN 1 AND 2 THEN '1-2 seats left'
     ELSE 'many seats left'
 END as seats_left, e.id AS ensemble_id
 FROM ensemble AS e
